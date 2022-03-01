@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rifzkhy</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header id="header">
+		<a href="https://www.instagram.com/rifzkhy/" target="_blank" class="logo">Rifzkhy</a>
+		<div class="toggle"></div>
+		<ul class="navigation">
+			<li><a href="#card">card</a></li>
+			<li><a href="#info">info</a></li>
+			<li><a href="">project</a></li>
+		</ul>
+	</header>
+	<section>
+		<img src="images\stars.png" id="stars" class="layer-1">
+		<img src="images\stars2.png" id="stars2" class="layer-2">
+		<img src="images\1.png" id="1" class="layer-3">
+		<!--<h2 id="text">Eid Mubarak</h2>-->
+		<img src="images\2.png" id="2" class="layer-4">
+		<img src="images\3.png" id="3" class="layer-5">
+		<img src="images\4.png" id="bottom">
+		<!--<img src="images\lamp.png" id="lamp">-->
+	</section>
+	<div class="container" id="card">
+		<div class="card" data-tilt>
+			<img src="images\RIF.png" class="photo">
+			<div class="circle"></div>
+			<div class="content">
+				<img src="images\js.png">
+				<img src="images\cplus.png">
+				<img src="images\nodejs.png">
+				<img src="images\csharp.png">
+				<img src="images\py.png">
+				<p>programming language skill badge :D</p>
+				<a href="https://www.instagram.com/rifzkhy/" target="_blank">instagram</a>
+			</div>
+		</div>
+		<div class="sec">
+			<h2 id="info">konnichiwa (*_*)</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<img src="images\under.png" class="sect">
+		<div class="project">
+			<h2>ongoing project</h2>
+		</div>
+	</body>
+	<script type="text/javascript">
+		let stars = document.getElementById('stars');
+		let stars2 = document.getElementById('stars2');
+		let l1 = document.getElementById('1');
+		let l2 = document.getElementById('2');
+		let l3 = document.getElementById('3');
+		let text = document.getElementById('text');
+		let header = document.getElementById('header');
+
+		window.addEventListener('scroll', function(){
+			let value = window.scrollY;
+			stars.style.bottom = value * 0.1 + '%';
+			l1.style.bottom = value * -0.30 + 'px';
+			l2.style.bottom = value * -0.20 + 'px';
+			l3.style.bottom = value * -0.15 + 'px';
+		})
+
+		const toggleMenu = document.querySelector('.toggle');
+		const navigation = document.querySelector('.navigation');
+		toggleMenu.onclick = function(){
+			toggleMenu.classList.toggle('active');
+			navigation.classList.toggle('active');
+		}
+	</script>
+	<script type="text/javascript" src="vanilla-tilt.min.js">
+		VanillaTilt.init(document.querySelector(".container"), {
+			max: 25,
+			speed: 400
+		});
+	</script>
+	</html>
